@@ -4,6 +4,8 @@ elseif exists("b:current_syntax")
 	finish
 endif
 
+set iskeyword+=-
+
 " Options
 syn keyword sshOption command
 syn keyword sshOption environment
