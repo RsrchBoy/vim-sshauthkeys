@@ -3,7 +3,7 @@ if version < 600
 elseif exists("b:current_syntax")
 	finish
 endif
- 
+
 " Options
 syn keyword sshOption command
 syn keyword sshOption environment
@@ -27,10 +27,10 @@ syn match sshSSH1Comment  " .*" contained
 " SSH2 key type
 syn match sshSSH2KeyType "ssh-rsa"
 syn match sshSSH2KeyType "ssh-dss"
- 
+
 " Strings
 syn region sshString start=/"/ skip=/\\"/ end=/"/ oneline
- 
+
 " Comments
 syn match sshComment /^#.*/
 
@@ -41,7 +41,7 @@ if version >= 508
 else
 	command -nargs=+ HiLink hi def link <args>
 endif
- 
+
 HiLink sshSSH1Bits     Type
 HiLink sshSSH1Exponent Special
 HiLink sshSSH1Comment  Comment
@@ -53,8 +53,8 @@ HiLink sshComment Comment
 
 HiLink sshOption  Keyword
 HiLink sshString  String
- 
+
 delcommand HiLink
- 
+
 let b:current_syntax = "sshauthkeys"
- 
+
