@@ -6,6 +6,9 @@ endif
 
 set iskeyword+=-
 
+" don't wrap on editing.  it's annoying
+setlocal textwidth=0
+
 " Options
 syn keyword sshOption command
 syn keyword sshOption environment
