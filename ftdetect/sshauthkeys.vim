@@ -1,2 +1,3 @@
-au BufRead,BufNewFile authorized_keys
-                       \ setlocal filetype=sshauthkeys commentstring=#%s
+au BufRead,BufNewFile authorized_keys set filetype=sshauthkeys
+au BufRead,BufNewFile .ssh/*.pub      set filetype=sshauthkeys
+au BufRead,BufNewFile ssh/*.pub       set filetype=sshauthkeys
