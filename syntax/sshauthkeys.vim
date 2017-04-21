@@ -26,9 +26,9 @@ syn match sshSSH1Comment  " .*" contained
 
 " SSH2
 
-syn region  sshSSH2Key     start=/\<AAAA/ end=/ / keepend skipwhite nextgroup=sshSSH2Comment contains=NONE,sshSSH2KeyBody oneline conceal cchar=*
+syn region  sshSSH2Key     start=/\<AAAA/ end=/\( \|$\)/ keepend nextgroup=sshSSH2Comment contains=NONE,sshSSH2KeyBody oneline conceal cchar=*
 syn match   sshSSH2Comment /\S.*$/ contained
-syn keyword sshSSH2KeyType ecdsa-sha2-nistp256 ssh-ed25519 ssh-rsa ssh-dss skipwhite nextgroup=sshSSH2Key,sshOption,sshOptionError
+syn keyword sshSSH2KeyType ecdsa-sha2-nistp256 ecdsa-sha2-nistp384 ecdsa-sha2-nistp521 ssh-ed25519 ssh-rsa ssh-dss nextgroup=sshSSH2Key,sshOption,sshOptionError
 
 " Strings
 syn region sshString start=/"/ skip=/\\"/ end=/"/ oneline
